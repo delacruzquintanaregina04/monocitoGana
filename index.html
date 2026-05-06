@@ -111,8 +111,8 @@
         height: 80px;
         object-fit: cover;
         border-radius: 18px;
-        border: 1px solid rgba(255,255,255,0.18);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       }
       .nav-links {
         display: flex;
@@ -444,11 +444,20 @@
       }
       .ficha-img {
         width: 100%;
+        max-width: 100%;
         height: auto;
         border-radius: 24px;
         border: 1px solid rgba(255, 255, 255, 0.15);
         box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
         object-fit: cover;
+      }
+      @media (max-width: 768px) {
+        .ficha-inner {
+          grid-template-columns: 1fr;
+        }
+        .ficha-img {
+          margin-top: 1rem;
+        }
       }
       .ficha-block {
         background: var(--glass);
@@ -1047,7 +1056,12 @@
     <nav>
       <div class="nav-logo">
         <a href="Web/im.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="Web/im.jpg" alt="Logo Monocito" class="logo-img" onerror="this.style.display='none'" />
+          <img
+            src="Web/im.jpg"
+            alt="Logo Monocito"
+            class="logo-img"
+            onerror="this.style.display = 'none'"
+          />
         </a>
         🔬 ICE · ELECCIONES SANGUÍNEAS 2026
       </div>
@@ -1211,144 +1225,146 @@
       </p>
       <div class="ficha-inner">
         <div class="ficha-grid">
-        <div class="ficha-block">
-          <h3>Morfología</h3>
-          <div class="stat-row">
-            <span class="label">Tamaño</span
-            ><span class="value">12 – 20 μm</span>
+          <div class="ficha-block">
+            <h3>Morfología</h3>
+            <div class="stat-row">
+              <span class="label">Tamaño</span
+              ><span class="value">12 – 20 μm</span>
+            </div>
+            <div class="stat-row">
+              <span class="label">La célula más grande</span
+              ><span class="value badge-pill badge-gold"
+                >¡Leucocito gigante!</span
+              >
+            </div>
+            <div class="stat-row">
+              <span class="label">Forma celular</span
+              ><span class="value">Redondeada / Esférica</span>
+            </div>
+            <div class="stat-row">
+              <span class="label">Núcleo</span
+              ><span class="value">Arriñonado, reniforme o en herradura</span>
+            </div>
+            <div class="stat-row">
+              <span class="label">Cromatina</span
+              ><span class="value">Laxa, poco condensada</span>
+            </div>
+            <div class="stat-row">
+              <span class="label">Citoplasma</span
+              ><span class="value">Abundante, gris-azulado</span>
+            </div>
+            <div class="stat-row">
+              <span class="label">Gránulos azurófilos</span
+              ><span class="value badge-pill badge-purple"
+                >Primarios lisosomales</span
+              >
+            </div>
+            <div class="stat-row">
+              <span class="label">Pseudópodos</span
+              ><span class="value">Sí — fagocitosis activa</span>
+            </div>
           </div>
-          <div class="stat-row">
-            <span class="label">La célula más grande</span
-            ><span class="value badge-pill badge-gold"
-              >¡Leucocito gigante!</span
-            >
+          <div class="ficha-block">
+            <h3>Datos de Campaña</h3>
+            <div class="stat-row">
+              <span class="label">Tipo de célula</span
+              ><span class="value">Leucocito agranulocito</span>
+            </div>
+            <div class="stat-row">
+              <span class="label">Origen</span
+              ><span class="value">Médula ósea (progenitor mieloide)</span>
+            </div>
+            <div class="stat-row">
+              <span class="label">Precursor</span
+              ><span class="value">Promonocito → Monocito</span>
+            </div>
+            <div class="stat-row">
+              <span class="label">Vida media en sangre</span
+              ><span class="value">1 – 3 días</span>
+            </div>
+            <div class="stat-row">
+              <span class="label">Vida media en tejidos</span
+              ><span class="value">Meses – años (como macrófago)</span>
+            </div>
+            <div class="stat-row">
+              <span class="label">% relativo en leucocitos</span
+              ><span class="value badge-pill badge-cyan">3 – 8 %</span>
+            </div>
+            <div class="stat-row">
+              <span class="label">Valor absoluto</span
+              ><span class="value">200 – 800 células/μL</span>
+            </div>
+            <div class="stat-row">
+              <span class="label">Sistema de defensa</span
+              ><span class="value">Inmunidad innata y adaptativa</span>
+            </div>
           </div>
-          <div class="stat-row">
-            <span class="label">Forma celular</span
-            ><span class="value">Redondeada / Esférica</span>
+          <div class="ficha-block">
+            <h3>Superpoderes Comprobados</h3>
+            <div class="stat-row">
+              <span class="label">Fagocitosis</span
+              ><span class="value badge-pill badge-pink"
+                >✅ Máxima eficiencia</span
+              >
+            </div>
+            <div class="stat-row">
+              <span class="label">Presentación de antígeno</span
+              ><span class="value badge-pill badge-cyan">APC profesional</span>
+            </div>
+            <div class="stat-row">
+              <span class="label">Diferenciación tisular</span
+              ><span class="value">→ Macrófago / Célula dendrítica</span>
+            </div>
+            <div class="stat-row">
+              <span class="label">Producción de citocinas</span
+              ><span class="value">IL-1, IL-6, TNF-α</span>
+            </div>
+            <div class="stat-row">
+              <span class="label">Remodelación tisular</span
+              ><span class="value badge-pill badge-green"
+                >M2 antiinflamatorio</span
+              >
+            </div>
+            <div class="stat-row">
+              <span class="label">Actividad microbicida</span
+              ><span class="value">ROS + enzimas lisosomales</span>
+            </div>
           </div>
-          <div class="stat-row">
-            <span class="label">Núcleo</span
-            ><span class="value">Arriñonado, reniforme o en herradura</span>
-          </div>
-          <div class="stat-row">
-            <span class="label">Cromatina</span
-            ><span class="value">Laxa, poco condensada</span>
-          </div>
-          <div class="stat-row">
-            <span class="label">Citoplasma</span
-            ><span class="value">Abundante, gris-azulado</span>
-          </div>
-          <div class="stat-row">
-            <span class="label">Gránulos azurófilos</span
-            ><span class="value badge-pill badge-purple"
-              >Primarios lisosomales</span
-            >
-          </div>
-          <div class="stat-row">
-            <span class="label">Pseudópodos</span
-            ><span class="value">Sí — fagocitosis activa</span>
+          <div class="ficha-block">
+            <h3>Coloraciones Histológicas</h3>
+            <div class="stat-row">
+              <span class="label">Wright / Giemsa</span
+              ><span class="value"
+                >Citoplasma gris-azulado; núcleo violeta</span
+              >
+            </div>
+            <div class="stat-row">
+              <span class="label">H&E</span
+              ><span class="value">Citoplasma rosa pálido; núcleo morado</span>
+            </div>
+            <div class="stat-row">
+              <span class="label">PAS</span
+              ><span class="value">Débil positivo (glucógeno escaso)</span>
+            </div>
+            <div class="stat-row">
+              <span class="label">NSE (Esterasa inespecífica)</span
+              ><span class="value badge-pill badge-gold"
+                >⭐ Positivo fuerte — marcador diagnóstico</span
+              >
+            </div>
+            <div class="stat-row">
+              <span class="label">Peroxidasa</span
+              ><span class="value">Débil positiva</span>
+            </div>
           </div>
         </div>
-        <div class="ficha-block">
-          <h3>Datos de Campaña</h3>
-          <div class="stat-row">
-            <span class="label">Tipo de célula</span
-            ><span class="value">Leucocito agranulocito</span>
-          </div>
-          <div class="stat-row">
-            <span class="label">Origen</span
-            ><span class="value">Médula ósea (progenitor mieloide)</span>
-          </div>
-          <div class="stat-row">
-            <span class="label">Precursor</span
-            ><span class="value">Promonocito → Monocito</span>
-          </div>
-          <div class="stat-row">
-            <span class="label">Vida media en sangre</span
-            ><span class="value">1 – 3 días</span>
-          </div>
-          <div class="stat-row">
-            <span class="label">Vida media en tejidos</span
-            ><span class="value">Meses – años (como macrófago)</span>
-          </div>
-          <div class="stat-row">
-            <span class="label">% relativo en leucocitos</span
-            ><span class="value badge-pill badge-cyan">3 – 8 %</span>
-          </div>
-          <div class="stat-row">
-            <span class="label">Valor absoluto</span
-            ><span class="value">200 – 800 células/μL</span>
-          </div>
-          <div class="stat-row">
-            <span class="label">Sistema de defensa</span
-            ><span class="value">Inmunidad innata y adaptativa</span>
-          </div>
-        </div>
-        <div class="ficha-block">
-          <h3>Superpoderes Comprobados</h3>
-          <div class="stat-row">
-            <span class="label">Fagocitosis</span
-            ><span class="value badge-pill badge-pink"
-              >✅ Máxima eficiencia</span
-            >
-          </div>
-          <div class="stat-row">
-            <span class="label">Presentación de antígeno</span
-            ><span class="value badge-pill badge-cyan">APC profesional</span>
-          </div>
-          <div class="stat-row">
-            <span class="label">Diferenciación tisular</span
-            ><span class="value">→ Macrófago / Célula dendrítica</span>
-          </div>
-          <div class="stat-row">
-            <span class="label">Producción de citocinas</span
-            ><span class="value">IL-1, IL-6, TNF-α</span>
-          </div>
-          <div class="stat-row">
-            <span class="label">Remodelación tisular</span
-            ><span class="value badge-pill badge-green"
-              >M2 antiinflamatorio</span
-            >
-          </div>
-          <div class="stat-row">
-            <span class="label">Actividad microbicida</span
-            ><span class="value">ROS + enzimas lisosomales</span>
-          </div>
-        </div>
-        <div class="ficha-block">
-          <h3>Coloraciones Histológicas</h3>
-          <div class="stat-row">
-            <span class="label">Wright / Giemsa</span
-            ><span class="value">Citoplasma gris-azulado; núcleo violeta</span>
-          </div>
-          <div class="stat-row">
-            <span class="label">H&E</span
-            ><span class="value">Citoplasma rosa pálido; núcleo morado</span>
-          </div>
-          <div class="stat-row">
-            <span class="label">PAS</span
-            ><span class="value">Débil positivo (glucógeno escaso)</span>
-          </div>
-          <div class="stat-row">
-            <span class="label">NSE (Esterasa inespecífica)</span
-            ><span class="value badge-pill badge-gold"
-              >⭐ Positivo fuerte — marcador diagnóstico</span
-            >
-          </div>
-          <div class="stat-row">
-            <span class="label">Peroxidasa</span
-            ><span class="value">Débil positiva</span>
-          </div>
-        </div>
+        <img
+          src="Web/imag.jpg"
+          alt="Monocito imag"
+          class="ficha-img"
+          onerror="this.style.display = 'none'"
+        />
       </div>
-      <img
-        src="Web/imag.jpg"
-        alt="Monocito imag"
-        class="ficha-img"
-        onerror="this.style.display = 'none'"
-      />
-    </div>
     </section>
 
     <!-- HISTOLOGÍA / COLORACIONES -->
